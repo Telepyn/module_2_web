@@ -1,81 +1,70 @@
 /********** Base styles **********/
 * {
- box-sizing: box-border;
- font-family: Zapf Chancery, cursive;
+    box-sizing: border-box;
+    font-family: 'Zapf Chancery', cursive;
 }
+
 h1 {
-  text-align: center ;
-  margin-top: 40px;
-  margin-bottom: 30px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
-h2 {
-  height: 30px;
-  width: 30%;
-  position: relative;
+
+.box__wrapper {
+    width: 33.33%;
+    float: left;
 }
-#one {
- background-color:  #F08080 ;
- position: absolute;
- top: -20px;
- right: 0; 
-}
-#two {
-background-color: #228B22 ;
-position: absolute;
-top: -20px;
-right: 0;
-}
-#three {
-background-color: #9932CC;
-position: absolute;
-top: -20px;
-right: 0;
-}
+
 .box {
     background-color: #87CEEB;
     border: 5px solid black;
     position: relative;
-    margin-right: 30px;
-    margin-top: 10px;
-    margin-left: auto;
+    margin: 0 30px 15px 0;
     padding: 20px;
-    padding-top: 25px;
     overflow: hidden;
 }
 
-.row {
-  width: 100%;
-  margin: 0;
-  padding: 15px;
-}
-/* Large devices */
-@media (min-width: 992px) {
-  .first {
-    width: 33.33%;
-    float: left;
-  }
-  .second {
-    width: 33.33%;
-    float: left;
-  }
-  .third {
-    width: 33.33%;
-    float: left;
-  }
+.box__title {
+    height: 30px;
+    margin: 0;
+    padding: 0 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
 }
 
-/* Medium devices */
-@media (min-width: 768px) and (max-width: 991px) {
-  .first {
-    width: 50%;
-    float: left;
-  }
-  .second {
-    width: 50%;
-    float: left;
-  }
-  .third {
-    width: 100%;
-    float: left ;
-  }
+.box__title_red {
+    background-color: #F08080;
 }
+
+.box__title_green {
+    background-color: #228B22;
+}
+
+.box__title_pink {
+    background-color: #9932CC;
+}
+
+
+/* Medium devices */
+@media (max-width: 992px) {
+    .box__wrapper {
+        width: 50%;
+        float: left;
+    }
+    .box__wrapper:last-child {
+        width: 100%;
+        float: left ;
+    }
+}
+@media (max-width: 768px) {
+    .box__wrapper {
+        width: 100%;
+        float: none;
+    }
+    .box {
+        margin: 0 15px 15px;
+    }
+}
+
